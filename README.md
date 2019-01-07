@@ -16,7 +16,7 @@ $ sudo chmod +x /path/to/perm
 $ sudo ln -s /path/to/perm /usr/local/bin/perm
 ```
 
-## Usage
+## Usage (via ssh)
 ```bash
 $ sudo perm [permission] [username] [(file) or (--all/-a)]
 ``` 
