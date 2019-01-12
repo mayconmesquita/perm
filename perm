@@ -47,7 +47,7 @@ fi
 
 # if perm is set
 if [ -n "$perm" ]; then 
-	# if perm is INT
+	# if perm is integer (0-9)
 	ret1='^[0-9]+$'
 	if [[ !$perm =~ $ret1 ]] ; then 
 		printf "$ERROR Not a valid permission number. $NC"
@@ -75,7 +75,7 @@ if [ -n "$owner" ]; then
 	getent passwd $owner >/dev/null 2>&1 && ret2=true
 
 	if $ret2; then
-		if [ -z "$file" ]; then 
+		if [ -z "$file" ]; then
 			printf "$ERROR Filename is not set. $NC\n"
 			exit 1
 		fi
